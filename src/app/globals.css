@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: osc;
+  src: url(./fonts/OpenSans_Condensed-Regular.ttf);
+}
+@font-face {
+  font-family: os;
+  src: url(./fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: mt;
+  src: url(./fonts//Montserrat-Regular.ttf);
+}
+.image{
+  transition: 0.3s;
+  &:hover{
+    transform: scale(1.05);
+  }
+}
+
+.hover-trainor{
+  &:hover{
+ transform: scale(1.05);
+  }
+}
