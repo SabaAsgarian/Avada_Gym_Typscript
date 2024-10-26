@@ -1,0 +1,1 @@
+# Avada_Gym_Typscript
