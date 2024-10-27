@@ -230,7 +230,7 @@ const Page: React.FC = () => {
             <Typography variant='h2' sx={{ fontWeight: 'thiner', color: 'white', width: '100%', textAlign: 'center', marginBottom: '5%', fontSize: '20px', fontFamily: 'mt' }}>
               Motivation is what gets you started. Habit is what keeps you going.
             </Typography>
-            <Box>
+            <Box sx={{marginBottom: '6%'}}>
               <Button sx={{ width: '200px', height: '60px', fontFamily: 'mt', border: '1px solid #b4b1af', borderRadius: '0px', color: '#b4b1af', backgroundColor: 'transparent', '&:hover': { color: 'white', border: '1px solid white' } }}>
                 Join Us Today
               </Button>
