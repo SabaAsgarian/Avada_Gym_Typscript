@@ -6,9 +6,9 @@ import '../globals.css'
 import image from './img/home_img-compressor.jpg'
 
 
-export default function CardBig() {
+const CardBig: React.FC = () => {
   return (
-    <Card sx={{margin:'10%',width:'80%', height:'auto',backgroundColor:'#1e2123', display: 'flex', boxShadow: 'none', flexDirection: { xs: 'column', sm: 'column', md: 'row' } }} >
+    <Card sx={{border:'none',margin:'10%',width:'80%',minHeight:'100%', maxHeight:'auto',backgroundColor:'#1e2123', display: 'flex', boxShadow: 'none', flexDirection: { xs: 'column', sm: 'column', md: 'row' } }} >
       <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: { xs: '100%', sm: '100%', md: '50%' } }}>
         <Image src={image} alt='img' style={{ width: '90%', height: '70%', borderRadius: '0px', }} className='image' />
       </Box>
@@ -27,7 +27,7 @@ export default function CardBig() {
             <input type="text"  className='duration-500 bg-[#222527] text-white h-[40px] border-2 border-[#737373] hover:border-0 hover:border-transparent' />
           </Box>
         
-          <Button sx={{ height:'55px',fontSize:'18px',fontFamily:'mt',width: '100%', backgroundColor: '#ee6059', color: 'white', borderRadius: '0px' }} className=''>
+          <Button sx={{ height:'55px',fontSize:'18px',fontFamily:'mt',width: '100%', backgroundColor: '#ee6059', color: 'white', borderRadius: '0px' }} >
             Start Now!
           </Button>
         </CardContent>
@@ -35,3 +35,4 @@ export default function CardBig() {
     </Card>
   );
 }
+export default CardBig;

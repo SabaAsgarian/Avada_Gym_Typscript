@@ -21,6 +21,7 @@ const config: Config = {
         'first': "url('./components/img/home-banner.jpg')",
         'third': "url('./components/img/gym.jpg')",
         'brucelee': "url('./components/img/home-testimonial-bg.jpg')",
+        'footer': "url('./components/img/dumbells.jpg')",
       
        
      

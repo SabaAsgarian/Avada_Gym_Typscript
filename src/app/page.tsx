@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Header from './components/header';
 import Skeleton from './components/skeleton';
 import './globals.css';
 import { Box, Button, Typography } from '@mui/material';
@@ -29,6 +28,13 @@ import TrainorCard from './components/cardtrainors'
 import trainorone from './components/img/trainer1.jpg'
 import trainortwo from './components/img/trainer3.jpg'
 import trainorthree from './components/img/trainer4.jpg'
+import Cardperformancee from './components/cardperformance'
+import perfone from './components/img/blog1.jpg'
+import perftwo from './components/img/blog6.jpg'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import perfthree from './components/img/blog4.jpg'
+
+import loading from './components/img/gym_logo_1x.png'
 interface CardDataItem {
   Icon: SvgIconComponent;
   title: string;
@@ -45,41 +51,49 @@ interface TrainCard {
   job: string;
   description: string;
 }
+interface Cardperformance {
+  image: any;
+  title: string;
+
+  description: string;
+}
 interface CardNoCap {
   image: any;
 
 }
+
 const Page: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollThreshold = window.innerHeight * 1.2; // 120vh
+      setShowScrollTop(window.scrollY > scrollThreshold);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
-
+   
     setIsLoading(false);
   }, []);
 
   if (isLoading) {
     return (
-      <div className="bg-white w-full h-full flex justify-center items-center text-center ">
-        <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </Box>
-        <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </Box>
-        <Box sx={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Skeleton />
-          <Skeleton />
-          <Skeleton />
-        </Box>
-
-
-
-      </div>
-    );
+      <>
+        <div className="bg-black w-full min-h-[120vh] max-h-auto flex justify-center items-center text-center relative">
+          <Image src={loading} alt="Loading"  style={{position:'absolute',zIndex:'99999'}}/>
+        </div>
+      </>
+    )
   }
 
   const cardData: CardDataItem[] = [
@@ -128,6 +142,45 @@ const Page: React.FC = () => {
       title: 'Peter Rice',
       job: 'Personal Trainer',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In augue nisl, onare volutpat.',
+    },
+
+  ];
+  const Cardperformance: Cardperformance[] = [
+    {
+      image: perfone,
+      title: 'Train with free weights or your body weight?',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
+    },
+    {
+      image: perftwo,
+      title: 'Nutritional advice that will keep you training',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
+    },
+    {
+      image: trainorthree,
+      title: 'Simple principles for your next workout',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
+    },
+    {
+      image: perfthree,
+      title: 'To be number one, train like you’re number two',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
+    },
+    {
+      image: trainorone,
+      title: 'The myths of shedding body fat explored',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
+    },
+    {
+      image: trainortwo,
+      title: 'Top 5 mistakes every gym member makes',
+     
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pretium, tortor vitae porttitor suscipit, sapien purus aliquet risus, eu finibus [...]',
     },
 
   ];
@@ -208,19 +261,21 @@ const Page: React.FC = () => {
           <CustomCard key={index} Icon={card.Icon} title={card.title} description={card.description} />
         ))}
       </Box>
-      <Box sx={{ width: '100%', minHeight: '100vh', maxHeight: 'auto', backgroundColor: '#25292b' }}>
+      <Box sx={{ width: '100%', minHeight: '100vh', maxHeight: 'auto', backgroundColor: '#25292b',display:'flex',justifyContent: 'center',
+          alignItems:'center',flexDirection: 'column' }}>
         <Box sx={{
           display: 'flex',
           flexWrap: 'wrap',
           justifyContent: 'center',
-
+          alignItems:'center',
           width: '80%',
-          margin: 'auto'
+         
         }} className="">
           <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto', textAlign: 'center' }}>
             <Typography variant='h2' sx={{ marginTop: '8%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>REAL WORLD RESULTS</Typography>
             <Image src={XX} alt='XX' width={30} height={30} style={{ marginBottom: '5%' }} />
           </Box>
+          
           {cardDatafour.map((card, index) => (
             <MediaCard key={index} image={card.image} title={card.title} description={card.description} />
           ))}
@@ -228,7 +283,7 @@ const Page: React.FC = () => {
       </Box>
       <Box sx={{ width: '100%', minHeight: '120vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto', textAlign: 'center' }}>
-          <Typography variant='h2' sx={{ marginTop: '20%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>HIGH PERFORMANCE FACILITIES</Typography>
+          <Typography variant='h2' sx={{ marginTop: '10%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>HIGH PERFORMANCE FACILITIES</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{ marginBottom: '5%' }} />
         </Box>
         <Box sx={{
@@ -279,10 +334,55 @@ const Page: React.FC = () => {
       </Box>
       <Box sx={{ backgroundColor: '#25292b', width: '100%', minHeight: '200vh', maxHeight: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', textAlign: 'center' }}>
-          <Typography variant='h2' sx={{ marginTop: '10%', marginBottom: '1.5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>PERFORMANCE NEWS</Typography>
+          <Typography variant='h2' sx={{ marginTop: '5%', marginBottom: '1.5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>PERFORMANCE NEWS</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{ marginBottom: '5%' }} />
         </Box>
+        <Box sx={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          width: '85%',
+          padding: '20px',
+          marginBottom: '5%'
+        }}>
+          {Cardperformance.map((card, index) => (
+            <Cardperformancee key={index} image={card.image} title={card.title}  description={card.description} />
+          ))}
+        </Box>
+        <Box sx={{ marginBottom: '10%' }} >
+          <Button sx={{cursor:'pointer', fontSize: '18px', width: '250px', height: '60px', fontFamily: 'mt', border: '1px solid #b4b1af', borderRadius: '0px', color: '#b4b1af', backgroundColor: 'transparent', '&:hover': { color: 'white', border: '1px solid white' } }}>
+          READ ALL ARTICLES
+          </Button>
+        </Box>
       </Box>
+      {showScrollTop && (
+        <Box 
+          onClick={scrollToTop}
+          sx={{
+            position: 'fixed',
+            bottom: '0%',
+            right: '5%',
+            cursor: 'pointer',
+            transition: 'opacity 0.3s',
+            opacity: showScrollTop ? 1 : 0,
+          }}
+        >
+          <Box 
+            sx={{
+              '&:hover': { backgroundColor: '#ee6059' },
+              backgroundColor: '#313131',
+              borderRadius: '8px 8px 0px 0px',
+              width: '50px',
+              height: '40px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <KeyboardArrowUpIcon sx={{ color: 'white' }} />
+          </Box>
+        </Box>
+      )}
     </>
   );
 }

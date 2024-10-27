@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 @font-face {
   font-family: osc;
   src: url(./fonts/OpenSans_Condensed-Regular.ttf);
@@ -26,4 +30,17 @@
   &:hover{
  transform: scale(1.05);
   }
+}
+.a{
+  background-image: linear-gradient(180deg, #f07f79 0%, #ee6059 100%);
+}
+.bg-footer {
+  background-image: url('./components//img/a.jpg');
+  background-color: #ee6059;
+  background-color: #ef7e78;
+
+  background-blend-mode: multiply; /* You can try different blend modes */
+  background-size: cover; /* This ensures the image covers the entire element */
+  background-position: center; /* This centers the background image */
+  
 }

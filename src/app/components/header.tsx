@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Image from 'next/image';
 import Logo from './img/gym_logo_1x.png'
-import Link from 'next/link';
+
 import { useState, useEffect } from 'react';
 
 const drawerWidth = '100%';
@@ -60,7 +60,7 @@ export default function ResponsiveAppBar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const vh5 = window.innerHeight * 0.001; // 5% of viewport height
+      const vh5 = window.innerHeight * 0.2; 
       if (currentScrollY > vh5) {
         setShowAppBar(false);
       } else {
@@ -84,15 +84,24 @@ export default function ResponsiveAppBar() {
   return (
     <Box sx={{ display: 'flex' }}>
       <StyledAppBar position="fixed" show={showAppBar}>
-        <Toolbar>
-        <Image src={Logo} alt="logo"  style={{ 
-    height: '80%', 
-    width: {xs:'30%', md:'17%'} as any, 
-    marginRight: '20px' 
-  }}  />
+        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', position: 'relative' }}>
+          <Image 
+            src={Logo} 
+            alt="logo" 
+            style={{ 
+              height: '80%', 
+              width: {xs: '30%', md: '17%'} as any, 
+            }}  
+          />
           
           {!isSmallScreen && (
-            <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+            <Box sx={{ 
+              position: 'absolute',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
               {navItems.map((item) => (
                 <Button 
                   key={item} 
@@ -111,11 +120,8 @@ export default function ResponsiveAppBar() {
             </Box>
           )}
           
-          <Box sx={{ flexGrow: 1 }} />
-          
           {!isMobile && (
             <Button variant="contained" sx={{ 
-              mr: 2,
               width: '180px',
               height: '60px',
               borderRadius: '0px',
@@ -150,8 +156,6 @@ export default function ResponsiveAppBar() {
             backgroundColor:'#1e2123',
             color: 'white'
           },
-          
-
         }}
         variant="temporary"
         anchor="right"
