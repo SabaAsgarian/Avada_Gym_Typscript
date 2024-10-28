@@ -230,7 +230,7 @@ const Page: React.FC = () => {
             <Typography variant='h2' sx={{ fontWeight: 'thiner', color: 'white', width: '100%', textAlign: 'center', marginBottom: '5%', fontSize: '20px', fontFamily: 'mt' }}>
               Motivation is what gets you started. Habit is what keeps you going.
             </Typography>
-            <Box sx={{marginBottom: '6%'}}>
+            <Box sx={{marginBottom: '10%'}}>
               <Button sx={{ width: '200px', height: '60px', fontFamily: 'mt', border: '1px solid #b4b1af', borderRadius: '0px', color: '#b4b1af', backgroundColor: 'transparent', '&:hover': { color: 'white', border: '1px solid white' } }}>
                 Join Us Today
               </Button>
@@ -240,7 +240,7 @@ const Page: React.FC = () => {
 
 
       </div>
-      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center',marginBottom: '10%',marginTop: '10%' }}>
         <Box sx={{ width: '60%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
           <Typography variant='h2' sx={{ marginTop: '8%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>WORLD CLASS STRENGTH</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{}} />
@@ -299,7 +299,7 @@ const Page: React.FC = () => {
           ))}
         </Box>
       </Box>
-      <div className='bg-brucelee  bg-fixed bg-cover w-full min-h-[80vh] max-h-auto flex justify-center items-center'>
+      <div className='bg-brucelee  bg-fixed bg-cover w-full min-h-[80vh] max-h-auto flex justify-center items-center my-[10%]'>
         <Box sx={{ color: "white", display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
           <Typography variant='h4' sx={{ width: { xs: "80%", lg: "45%" }, fontFamily: 'os' }}>“ I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times ”</Typography>
           <Typography sx={{ fontWeight: 'bolder', marginTop: '5%', fontFamily: 'os', fontSize: '18px' }}>BRUCE LEE • QUOTE OF THE DAY</Typography>
