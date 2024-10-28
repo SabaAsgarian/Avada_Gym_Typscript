@@ -240,7 +240,7 @@ const Page: React.FC = () => {
 
 
       </div>
-      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center',marginBottom: '10%',marginTop: '10%' }}>
+      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
         <Box sx={{ width: '60%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
           <Typography variant='h2' sx={{ marginTop: '8%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>WORLD CLASS STRENGTH</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{}} />
