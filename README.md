@@ -1,43 +1,36 @@
-# Avada_Gym_Typscript  
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Getting Started
 
+First, run the development server:
 
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-
-- [Demo Project](https://avada-gym-typscript.vercel.app/)
-
-- Developed by Saba Asgarian
-
-- Created - 2024-10-27
-
-- Technologies Used - Html , Css , Tailwind , Typescript ,Nextjs , React , MaterialUi
-
-- Hooks Used : useState 
-
-- Role - Frontend
-
-- How to reach me : with my [instagram](https://www.instagram.com/saba_asgarian_web?igsh=M2Z2dTU3cHFmeW1o&utm_source=qr) and [linkedin](https://www.linkedin.com/in/saba-asgarian-69161088?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
-![g1](https://github.com/user-attachments/assets/c47ba444-7b83-477d-ab98-5a417cf5cce6)
-![g2](https://github.com/user-attachments/assets/c33af589-31bb-4032-be90-8d810a4bb0e1)
-![g3](https://github.com/user-attachments/assets/94c1be7c-885e-4464-9427-c718ce21b800)
-![g4](https://github.com/user-attachments/assets/47190996-5564-456a-bd7f-3716d94198bb)
-![g5](https://github.com/user-attachments/assets/d3aa0081-8f6f-4b4b-965f-5f76a485d215)
-![g6](https://github.com/user-attachments/assets/b600f8a1-5712-42e2-9e87-657cf4e538d1)
-![g7](https://github.com/user-attachments/assets/b42f0426-cf06-4c16-8c64-87e6f7f2d4a9)
-![g8](https://github.com/user-attachments/assets/b17832c5-6482-4a05-a6a4-489d636a97e7)
-![g9](https://github.com/user-attachments/assets/02a05985-b810-475a-a3cf-84306553a769)
-  
-
-
-
-
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

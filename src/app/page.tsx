@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Skeleton from './components/skeleton';
+
 import './globals.css';
 import { Box, Button, Typography } from '@mui/material';
 import XX from './components/img/divider-xx-red.png'
@@ -64,7 +64,7 @@ interface CardNoCap {
 
 const Page: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   useEffect(() => {
     const handleScroll = () => {
       const scrollThreshold = window.innerHeight * 1.2; // 120vh
@@ -230,7 +230,7 @@ const Page: React.FC = () => {
             <Typography variant='h2' sx={{ fontWeight: 'thiner', color: 'white', width: '100%', textAlign: 'center', marginBottom: '5%', fontSize: '20px', fontFamily: 'mt' }}>
               Motivation is what gets you started. Habit is what keeps you going.
             </Typography>
-            <Box sx={{marginBottom: '10%'}}>
+            <Box>
               <Button sx={{ width: '200px', height: '60px', fontFamily: 'mt', border: '1px solid #b4b1af', borderRadius: '0px', color: '#b4b1af', backgroundColor: 'transparent', '&:hover': { color: 'white', border: '1px solid white' } }}>
                 Join Us Today
               </Button>
@@ -240,9 +240,9 @@ const Page: React.FC = () => {
 
 
       </div>
-      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
-        <Box sx={{ width: '60%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
-          <Typography variant='h2' sx={{ marginTop: '8%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>WORLD CLASS STRENGTH</Typography>
+      <Box sx={{ width: '100%', minHeight: '60vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Box sx={{ width: '60%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center',marginTop: '5%', marginBottom: '5%' }}>
+          <Typography variant='h2' sx={{ marginTop: '5%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>WORLD CLASS STRENGTH</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{}} />
           <Typography variant='body2' sx={{ marginTop: '5%', fontSize: '15px', color: '#999999', fontFamily: 'os', fontWeight: 'bolder' }}>At Avada Gym, everything we do from top to bottom is of the highest quality to ensure we’re equipped to help you reach your goals of a healthy and fit lifestyle.</Typography>
         </Box>
@@ -282,7 +282,7 @@ const Page: React.FC = () => {
         </Box>
       </Box>
       <Box sx={{ width: '100%', minHeight: '120vh', maxHeight: 'auto', backgroundColor: '#25292b', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', textAlign: 'center' }}>
-        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto', textAlign: 'center' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: 'auto', textAlign: 'center', }}>
           <Typography variant='h2' sx={{ marginTop: '10%', marginBottom: '5%', fontSize: '35px', color: 'white', fontFamily: 'mt', fontWeight: 'bolder' }}>HIGH PERFORMANCE FACILITIES</Typography>
           <Image src={XX} alt='XX' width={30} height={30} style={{ marginBottom: '5%' }} />
         </Box>
@@ -299,8 +299,8 @@ const Page: React.FC = () => {
           ))}
         </Box>
       </Box>
-      <div className='bg-brucelee  bg-fixed bg-cover w-full min-h-[80vh] max-h-auto flex justify-center items-center '>
-        <Box sx={{ color: "white", display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
+      <div className='bg-brucelee  bg-fixed bg-cover w-full min-h-[80vh] max-h-auto flex justify-center items-center'>
+        <Box sx={{ color: "white", display: 'flex', flexDirection: 'column', textAlign: 'center', justifyContent: 'center', alignItems: 'center',marginTop: '5%', marginBottom: '5%' }}>
           <Typography variant='h4' sx={{ width: { xs: "80%", lg: "45%" }, fontFamily: 'os' }}>“ I fear not the man who has practiced 10,000 kicks once, but I fear the man who has practiced one kick 10,000 times ”</Typography>
           <Typography sx={{ fontWeight: 'bolder', marginTop: '5%', fontFamily: 'os', fontSize: '18px' }}>BRUCE LEE • QUOTE OF THE DAY</Typography>
         </Box>
