@@ -1,3 +1,36 @@
+# Avada_Gym_Typscript  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- [Demo Project](avada-gym-typscript.vercel.app)
+
+- Developed by Saba Asgarian
+
+- Created - 2024-10-27
+
+- Technologies Used - Html , Css , Tailwind , TypeScript , Nextjs , React , MaterialUi
+
+- Hooks Used : useState 
+
+- Role - Frontend
+
+- How to reach me : with my [instagram](https://www.instagram.com/saba_asgarian_web?igsh=M2Z2dTU3cHFmeW1o&utm_source=qr) and [linkedin](https://www.linkedin.com/in/saba-asgarian-69161088?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
+
+
+
 ![g1](https://github.com/user-attachments/assets/c47ba444-7b83-477d-ab98-5a417cf5cce6)
 ![g2](https://github.com/user-attachments/assets/c33af589-31bb-4032-be90-8d810a4bb0e1)
 ![g3](https://github.com/user-attachments/assets/94c1be7c-885e-4464-9427-c718ce21b800)
