@@ -14,7 +14,7 @@
 
 
 
-- [Demo Project](avada-gym-typscript.vercel.app)
+- [Demo Project](https://avada-gym-typscript.vercel.app/)
 
 - Developed by Saba Asgarian
 
