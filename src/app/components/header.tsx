@@ -162,7 +162,7 @@ const ResponsiveAppBar: React.FC<Props> = (props) => {
             width: drawerWidth,
             backgroundColor: '#1e2123',
             color: 'white',
-            top: '20%', // Add this line
+            top: '30%', // Add this line
             height: '90%', // Add this line to make it take up remaining space
           },
         }}
