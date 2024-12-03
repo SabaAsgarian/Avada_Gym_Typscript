@@ -88,11 +88,11 @@ const Page: React.FC = () => {
 
   if (isLoading) {
     return (
-      <>
+      <div className="bg-black w-full min-h-[120vh] max-h-auto flex justify-center items-center text-center relative">
         <div className="bg-black w-full min-h-[120vh] max-h-auto flex justify-center items-center text-center relative">
           <Image src={loading} alt="Loading"  style={{position:'absolute',zIndex:'99999'}}/>
         </div>
-      </>
+      </div>
     )
   }
 
