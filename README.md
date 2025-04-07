@@ -20,7 +20,7 @@
 
 - Created - 2024-10-27
 
-- Technologies Used - Html , Css , Tailwind , TypeScript , Nextjs , React , MaterialUi
+- Technologies Used - Html , Css , Tailwind , TypeScript , Nextjs , React , Material Ui
 
 - Hooks Used : useState 
 
