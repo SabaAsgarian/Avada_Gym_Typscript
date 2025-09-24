@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
                                     alt="Logo"
                                     priority
 
-                                    style={{ width: '260px', height: '176px' }}
+                                    style={{ width: '270px', height: '176px' }}
                                 />
                             </Box>
                          </Item>
@@ -143,6 +143,7 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+
 
 
 
