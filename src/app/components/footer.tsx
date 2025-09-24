@@ -103,15 +103,17 @@ const Footer: React.FC = () => {
                             </a>
                         </Item>
                         <Link href="/" style={{ textDecoration: 'none' }}>
+                             <Item>
                             <Box sx={{ transition: '1s', width: '100%', height: '100%', '&:hover': { transform: 'scale(1.1)' } }}>
                                 <Image
                                     src={logO}
                                     alt="Logo"
                                     priority
 
-                                    style={{ width: '260px', height: '176px',objectFit:"cover" }}
+                                    style={{ width: '260px', height: '176px' }}
                                 />
                             </Box>
+                         </Item>
                         </Link>
                     </Stack>
                     <Box sx={{ width: '100%', my: '5%',backgroundColor:"#1e2123" }}>
@@ -141,5 +143,6 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+
 
 
