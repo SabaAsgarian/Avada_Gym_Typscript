@@ -63,7 +63,7 @@ interface CardNoCap {
 }
 
 const Page: React.FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  
   const [showScrollTop, setShowScrollTop] = useState<boolean>(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -81,20 +81,7 @@ const Page: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  useEffect(() => {
-   
-    setIsLoading(false);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="bg-black w-full min-h-[120vh] max-h-auto flex justify-center items-center text-center relative">
-        <div className="bg-black w-full min-h-[120vh] max-h-auto flex justify-center items-center text-center relative">
-          <Image src={loading} alt="Loading"  style={{position:'absolute',zIndex:'99999'}}/>
-        </div>
-      </div>
-    )
-  }
+  
 
   const cardData: CardDataItem[] = [
     { Icon: LinkOff, title: 'Strength & Conditioning', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.' },
