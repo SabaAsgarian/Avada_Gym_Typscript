@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
 
                     <Stack
                         direction={{ xs: 'column', md: 'row' }}
-                        spacing={{ xs: 3, sm: 2, md: 4, lg: 10 }}
+                        spacing={{ xs: 3, sm: 2, md: 4, lg: 8 }}
                     >
                         <Item>
                             <a href="#link1" style={{ textDecoration: 'none', textAlign: 'start' }}>
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
                                     alt="Logo"
                                     priority
 
-                                    style={{ width: '100%', height: '100%', }}
+                                    style={{ width: '260px', height: '176px', }}
                                 />
                             </Box>
                         </Link>
@@ -141,3 +141,4 @@ const Footer: React.FC = () => {
 }
 
 export default Footer;
+
